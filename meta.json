@@ -1,2 +1,23 @@
 {
+  "prompts": {
+    "description": {
+      "type": "string",
+      "required": false,
+      "message": "Project description",
+      "default": "A Vue.js project"
+    },
+    "jest": {
+      "type": "confirm",
+      "message": "Setup jest config?"
+    }
+  },
+  "filters": {
+    ".eslintrc.js": "jest",
+    "tests/setup.js": "jest",
+    ".jest.js": "jest",
+    "tsconfig.jest.json": "jest",
+    "tsconfig.test.json": "jest",
+    "tests/**/*": "jest"
+  },
+  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 }

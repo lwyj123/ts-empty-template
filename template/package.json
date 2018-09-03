@@ -25,7 +25,8 @@
     "release": "standard-version",
     "prepare": "gulp build:prod",
     "publish": "npm run docs:publish && node scripts/publish.js",
-    "examples": "npm run build && node ./examples/examples.js"
+    "examples": "npm run build && node ./examples/examples.js"{{#jest}},
+    "test": "jest --config .jest.js"{{/jest}}
   },
   "engines": {
     "node": ">=5.10"
@@ -58,7 +59,11 @@
     "tslint-config-semistandard": "^7.0.0",
     "typedoc": "^0.11.1",
     "typescript": "^2.9.2",
-    "uglify-es": "^3.3.10"
+    "uglify-es": "^3.3.10"{{#jest}},
+    "@types/jest": "^23.3.1",
+    "babel-jest": "^23.4.2",
+    "ts-jest": "^23.1.4",
+    "jest": "^23.5.0"{{/jest}}
   },
   "keywords": [
     "filestack",
